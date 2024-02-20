@@ -1,4 +1,4 @@
-import { ThemeShortType } from '../theme';
+import { ThemeShortType, ThemeType } from '../theme';
 import { With } from '../types';
 import { TestShortType, TestType } from '../test';
 import { TestShortResult } from '../tests';
@@ -48,3 +48,20 @@ export type ThemeQuestionsAmount = {
 export type ThemeQuestionsShort = {
     questions: QuestionShortType[];
 }
+
+export type ThemeFullType =
+    ThemeChildren
+    & ThemeTestsWithShortResults
+    & ThemeBreadcrumb
+    & ThemeNext
+    & ThemePrev
+    & ThemeType;
+
+export type ThemeChildrenType =
+    ThemeRecursiveChildren
+    & ThemeShortType
+    & ThemeBreadcrumb;
+
+export type ThemesType =
+    ThemeRecursiveChildren
+    & ThemeShortType;

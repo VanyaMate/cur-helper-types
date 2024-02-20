@@ -62,3 +62,6 @@ export type TestPassingThemes = {
 export type TestPassingShortInfo =
     Pick<TestPassingType, 'id' | 'status'>
     & TestPassingResultsShort;
+
+export type TestPassingFullType = With<TestPassingType, [ TestPassingProcess ]>;
+export type TestResultFullType = With<TestPassingType, [ TestPassingResults, TestPassingUserShort, TestPassingThemes, TestPassingTestShort ]>;

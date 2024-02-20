@@ -1,7 +1,8 @@
 import { With } from '../types';
-import { TestShortType } from '../test';
+import { TestShortType, TestType } from '../test';
 import { TestPassingShortInfo } from '../test-passing';
 import { ThemeShortType } from '../theme';
+import { ThemeTestsWithShortResults } from '../themes';
 
 
 export type TestChildren = {
@@ -23,3 +24,6 @@ export type TestThemeShort = {
 export type TestQuestionsThemesShort = {
     themes: ThemeShortType[];
 }
+
+export type TestFullType = With<TestType, [ TestShortResult, TestThemeShort, TestQuestionsThemesShort ]>;
+export type TestListType = With<ThemeShortType, [ ThemeTestsWithShortResults ]>;
