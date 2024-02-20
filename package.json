@@ -1,0 +1,23 @@
+{
+    "name": "@vanyamate/cur-helper-types",
+    "version": "0.0.1",
+    "private": false,
+    "description": "Types for cur-helper",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/VanyaMate/cur-helper-types.git"
+    },
+    "keywords": [
+        "types"
+    ],
+    "author": "VanyaMate",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/VanyaMate/cur-helper-types/issues"
+    },
+    "homepage": "https://github.com/VanyaMate/cur-helper-types#readme"
+}
