@@ -1,10 +1,12 @@
 {
     "name": "@vanyamate/cur-helper-types",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "private": false,
     "description": "Types for cur-helper",
     "main": "index.js",
-    "scripts": {},
+    "scripts": {
+        "publish": "npx auto-version && npm publish --access public"
+    },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/VanyaMate/cur-helper-types.git"
@@ -17,5 +19,8 @@
     "bugs": {
         "url": "https://github.com/VanyaMate/cur-helper-types/issues"
     },
-    "homepage": "https://github.com/VanyaMate/cur-helper-types#readme"
+    "homepage": "https://github.com/VanyaMate/cur-helper-types#readme",
+    "devDependencies": {
+        "auto-version-js": "^0.3.10"
+    }
 }
