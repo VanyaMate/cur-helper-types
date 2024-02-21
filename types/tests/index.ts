@@ -3,7 +3,7 @@ import { TestShortType, TestType } from '../test';
 import { TestPassingShortInfo } from '../test-passing';
 import { ThemeShortType } from '../theme';
 import { ThemeTestsWithShortResults } from '../themes';
-import { QuestionShortType } from '../question';
+import { AdminQuestionShortType, QuestionShortType } from '../question';
 
 
 export type TestChildren = {
@@ -28,6 +28,10 @@ export type TestQuestionsThemesShort = {
 
 export type TestQuestionsShort = {
     questions: QuestionShortType[];
+}
+
+export type AdminTestQuestionsShort = {
+    questions: AdminQuestionShortType[];
 }
 
 export type TestFullType = With<TestType, [ TestShortResult, TestThemeShort, TestQuestionsThemesShort ]>;

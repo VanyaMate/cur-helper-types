@@ -1,12 +1,10 @@
 {
     "name": "@vanyamate/cur-helper-types",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "private": false,
     "description": "Types for cur-helper",
     "main": "index.js",
-    "scripts": {
-        "publish": "npm publish --access public"
-    },
+    "scripts": {},
     "repository": {
         "type": "git",
         "url": "git+https://github.com/VanyaMate/cur-helper-types.git"
