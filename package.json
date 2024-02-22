@@ -1,11 +1,11 @@
 {
     "name": "@vanyamate/cur-helper-types",
-    "version": "0.0.5",
+    "version": "0.0.10",
     "private": false,
     "description": "Types for cur-helper",
     "main": "index.js",
     "scripts": {
-        "publish": "npx auto-version && npm publish --access public"
+        "publish": "npx auto-version; npm publish --access public"
     },
     "repository": {
         "type": "git",
