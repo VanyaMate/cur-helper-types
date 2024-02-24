@@ -1,6 +1,6 @@
 import { ThemeShortType, ThemeType } from '../theme';
 import { With } from '../types';
-import { TestShortType, TestType } from '../test';
+import { AdminTestShortType, TestShortType, TestType } from '../test';
 import { AdminTestThemeShort, TestShortResult } from '../tests';
 import { AdminQuestionShortType, QuestionShortType, QuestionType } from '../question';
 
@@ -38,7 +38,7 @@ export type ThemeTestsWithShortResults = {
 }
 
 export type AdminThemeTestsShort = {
-    tests: AdminTestThemeShort[];
+    tests: AdminTestShortType[];
 }
 
 export type ThemeQuestions = {
