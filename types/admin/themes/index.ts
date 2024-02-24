@@ -1,11 +1,13 @@
 import { With } from '../../types';
 import { ThemeType } from '../../theme';
-import { ThemeQuestionsShort, ThemeTestsShort } from '../../themes';
+import {
+    AdminThemeQuestionsShort, AdminThemeTestsShort,
+} from '../../themes';
 
 
 export type AdminThemeType = With<ThemeType, [
-    ThemeQuestionsShort,
-    ThemeTestsShort
+    AdminThemeQuestionsShort,
+    AdminThemeTestsShort
 ]>
 
 export type AdminThemeShortType = Pick<ThemeType, 'id' | 'publicId' | 'title' | 'description' | 'enabled' | 'url'>;

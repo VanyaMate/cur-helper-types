@@ -1,8 +1,8 @@
 import { ThemeShortType, ThemeType } from '../theme';
 import { With } from '../types';
 import { TestShortType, TestType } from '../test';
-import { TestShortResult } from '../tests';
-import { QuestionShortType, QuestionType } from '../question';
+import { AdminTestThemeShort, TestShortResult } from '../tests';
+import { AdminQuestionShortType, QuestionShortType, QuestionType } from '../question';
 
 
 export type ThemeChildren = {
@@ -37,6 +37,10 @@ export type ThemeTestsWithShortResults = {
     tests: With<TestType, [ TestShortResult ]>[]
 }
 
+export type AdminThemeTestsShort = {
+    tests: AdminTestThemeShort[];
+}
+
 export type ThemeQuestions = {
     questions: QuestionType[];
 }
@@ -47,6 +51,10 @@ export type ThemeQuestionsAmount = {
 
 export type ThemeQuestionsShort = {
     questions: QuestionShortType[];
+}
+
+export type AdminThemeQuestionsShort = {
+    questions: AdminQuestionShortType[];
 }
 
 export type ThemeFullType =
