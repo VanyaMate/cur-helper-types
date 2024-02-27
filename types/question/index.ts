@@ -28,7 +28,7 @@ export type QuestionThemes = {
     themes: ThemeShortType[];
 }
 
-export type QuestionCreateType = Create<QuestionType, 'title' | 'answers'>;
+export type QuestionCreateType = Create<QuestionType, 'title'>;
 export type QuestionUpdateType = Partial<QuestionType>;
 export type QuestionShortType = Pick<QuestionType, 'id' | 'title' | 'description' | 'complexity'>;
 export type AdminQuestionShortType = Pick<QuestionType, 'id' | 'title' | 'description' | 'complexity' | 'enabled'>;
