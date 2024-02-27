@@ -1,4 +1,5 @@
 import {
+    QuestionAnswers,
     QuestionResult,
     QuestionSelect,
     QuestionThemes,
@@ -28,7 +29,7 @@ export type TestPassingType = {
 }
 
 export type TestPassingProcess = {
-    questions: With<QuestionType, [ QuestionSelect ]>[];
+    questions: With<QuestionType, [ QuestionSelect, QuestionAnswers ]>[];
     remainingTime: number;
 }
 
@@ -36,7 +37,7 @@ export type TestPassingResults = {
     result: TestPassingResult;
     rightAnswers: number;
     finishTime: number;
-    questions: With<QuestionType, [ QuestionSelect, QuestionResult, QuestionThemes ]>[];
+    questions: With<QuestionType, [ QuestionSelect, QuestionResult, QuestionThemes, QuestionAnswers ]>[];
 }
 
 export type TestPassingResultsShort =
