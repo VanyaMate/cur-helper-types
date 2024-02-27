@@ -7,9 +7,10 @@ export type QuestionAnswerType = {
     title: string;
     description: string;
     correct: boolean;
+    questionId: string;
 }
 
-export type QuestionAnswerCreateType = Create<QuestionAnswerType, 'title' | 'correct'>;
-export type QuestionAnswerUpdateType = Partial<Omit<QuestionAnswerType, 'id' | 'correct'>>;
+export type QuestionAnswerCreateType = Create<QuestionAnswerType, 'title' | 'correct' | 'questionId'>;
+export type QuestionAnswerUpdateType = Partial<Omit<QuestionAnswerType, 'id' | 'correct' | 'questionId'>>;
 export type QuestionAnswerShortType = Pick<QuestionAnswerType, 'id' | 'title'>;
 export type AdminQuestionAnswerShortType = Pick<QuestionAnswerType, 'id' | 'enabled' | 'title' | 'correct'>;
