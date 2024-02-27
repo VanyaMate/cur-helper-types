@@ -12,7 +12,6 @@ export type QuestionType = {
     body: string;
     complexity: Complexity;
     points: number;
-    answers: QuestionAnswerType[];
 }
 
 export type QuestionSelect = {
@@ -26,6 +25,10 @@ export type QuestionResult = {
 
 export type QuestionThemes = {
     themes: ThemeShortType[];
+}
+
+export type QuestionAnswers = {
+    answers: QuestionAnswerType[];
 }
 
 export type QuestionCreateType = Create<QuestionType, 'title'>;
