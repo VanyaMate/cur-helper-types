@@ -3,6 +3,7 @@ import { QuestionAnswerType } from '../answer';
 import { ThemeShortType } from '../theme';
 import { Create, With } from '../types';
 import { AdminTestShortType, TestShortType } from '../test';
+import { AdminThemeShortType } from '../admin/themes';
 
 
 export type QuestionType = {
@@ -15,7 +16,7 @@ export type QuestionType = {
     points: number;
 }
 
-export type QuestionFullType = With<QuestionType, [ QuestionAnswers, QuestionThemes, AdminQuestionTests ]>;
+export type QuestionFullType = With<QuestionType, [ QuestionAnswers, AdminQuestionThemes, AdminQuestionTests ]>;
 
 export type QuestionSelect = {
     selectId: string;
@@ -28,6 +29,10 @@ export type QuestionResult = {
 
 export type QuestionThemes = {
     themes: ThemeShortType[];
+}
+
+export type AdminQuestionThemes = {
+    themes: AdminThemeShortType[];
 }
 
 export type QuestionAnswers = {
