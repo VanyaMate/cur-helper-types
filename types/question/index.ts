@@ -2,6 +2,7 @@ import { Complexity } from '../enums';
 import { QuestionAnswerType } from '../answer';
 import { ThemeShortType } from '../theme';
 import { Create, With } from '../types';
+import { AdminTestShortType, TestShortType } from '../test';
 
 
 export type QuestionType = {
@@ -31,6 +32,14 @@ export type QuestionThemes = {
 
 export type QuestionAnswers = {
     answers: QuestionAnswerType[];
+}
+
+export type QuestionTests = {
+    tests: TestShortType[];
+}
+
+export type AdminQuestionTests = {
+    tests: AdminTestShortType[];
 }
 
 export type QuestionCreateType = Create<QuestionType, 'title'>;
