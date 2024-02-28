@@ -15,7 +15,7 @@ export type QuestionType = {
     points: number;
 }
 
-export type QuestionFullType = With<QuestionType, [ QuestionAnswers, QuestionThemes ]>;
+export type QuestionFullType = With<QuestionType, [ QuestionAnswers, QuestionThemes, AdminQuestionTests ]>;
 
 export type QuestionSelect = {
     selectId: string;
