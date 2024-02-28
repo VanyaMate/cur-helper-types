@@ -1,6 +1,6 @@
 {
     "name": "@vanyamate/cur-helper-types",
-    "version": "0.0.19",
+    "version": "0.0.20",
     "private": false,
     "description": "Types for cur-helper",
     "main": "index.js",

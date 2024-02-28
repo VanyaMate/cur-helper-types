@@ -1,7 +1,7 @@
 import { Complexity } from '../enums';
 import { QuestionAnswerType } from '../answer';
 import { ThemeShortType } from '../theme';
-import { Create } from '../types';
+import { Create, With } from '../types';
 
 
 export type QuestionType = {
@@ -13,6 +13,8 @@ export type QuestionType = {
     complexity: Complexity;
     points: number;
 }
+
+export type QuestionFullType = With<QuestionType, [ QuestionAnswers, QuestionThemes ]>;
 
 export type QuestionSelect = {
     selectId: string;
