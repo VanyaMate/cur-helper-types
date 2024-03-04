@@ -70,6 +70,6 @@ export type ThemeChildrenType =
     & ThemeShortType
     & ThemeBreadcrumb;
 
-export type ThemesType =
+export type ThemeRecursiveType =
     ThemeRecursiveChildren
     & ThemeShortType;
