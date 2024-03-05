@@ -10,3 +10,11 @@ export type ErrorMessageType = {
     messages: string[];
     code: ErrorCode;
 }
+
+export interface IErrorCaller {
+    notFound (...messages: string[]): ErrorMessageType;
+
+    noValidData (...messages: string[]): ErrorMessageType;
+
+    noAccess (...messages: string[]): ErrorMessageType;
+}
