@@ -3,7 +3,7 @@ export declare enum ErrorCode {
     NO_VALID_DATA = 20000,
     NO_ACCESS = 30000
 }
-export type ErrorType = (...messages: string[]) => ErrorResponseType;
+export type ErrorType = (errors: ErrorMessageType[]) => ErrorResponseType;
 export type ErrorMessageType = {
     target: string;
     messages: string[];
@@ -13,7 +13,7 @@ export type ErrorResponseType = {
     code: ErrorCode;
 };
 export interface IErrorCaller {
-    notFound(...messages: string[]): ErrorResponseType;
-    noValidData(...messages: string[]): ErrorResponseType;
-    noAccess(...messages: string[]): ErrorResponseType;
+    notFound(messages: ErrorMessageType[]): ErrorResponseType;
+    noValidData(messages: ErrorMessageType[]): ErrorResponseType;
+    noAccess(messages: ErrorMessageType[]): ErrorResponseType;
 }
