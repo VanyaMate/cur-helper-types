@@ -16,3 +16,4 @@ export * from './types/theme';
 export * from './types/user';
 export * from './types/jwt';
 export * from './types/authorization';
+export * from './types/error';
