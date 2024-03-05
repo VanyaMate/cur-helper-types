@@ -1,11 +1,12 @@
 {
     "name": "@vanyamate/cur-helper-types",
-    "version": "0.0.29",
+    "version": "0.0.30",
     "private": false,
     "description": "Types for cur-helper",
-    "main": "index.ts",
+    "main": "index.js",
     "scripts": {
-        "v": "npx auto-version"
+        "v": "npx auto-version",
+        "build": "tsc"
     },
     "repository": {
         "type": "git",
@@ -22,5 +23,8 @@
     "homepage": "https://github.com/VanyaMate/cur-helper-types#readme",
     "devDependencies": {
         "auto-version-js": "^0.3.10"
+    },
+    "dependencies": {
+        "typescript": "^5.3.3"
     }
 }
