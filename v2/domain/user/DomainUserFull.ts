@@ -15,16 +15,16 @@ export type DomainUserFull =
     }
     & DomainUser;
 
-export const isDomainUserFull: TypeGuard<DomainUserFull> = function (data: any): data is DomainUserFull {
+export const isDomainUserFull: TypeGuard<DomainUserFull> = function (data: any, partial: boolean = false): data is DomainUserFull {
     if (typeof data !== 'object' || data === null) {
         return false;
     }
 
     if (
-        !isDomainUserContacts(data.contacts) ||
-        !isDomainUserNames(data.names) ||
-        !isDomainUserState(data.state) ||
-        !isDomainUser(data)
+        !isDomainUserContacts(data.contacts, partial) ||
+        !isDomainUserNames(data.names, partial) ||
+        !isDomainUserState(data.state, partial) ||
+        !isDomainUser(data, partial)
     ) {
         return false;
     }
@@ -32,8 +32,8 @@ export const isDomainUserFull: TypeGuard<DomainUserFull> = function (data: any):
     return true;
 };
 
-export const assertDomainUserFull: TypeAssert<DomainUserFull> = function (data: any, variableName: string, typeName: string) {
-    if (!isDomainUserFull(data)) {
+export const assertDomainUserFull: TypeAssert<DomainUserFull> = function (data: any, variableName: string, typeName: string, partial: boolean = false) {
+    if (!isDomainUserFull(data, partial)) {
         throwAssertError(variableName, typeName);
     }
 };

@@ -1,6 +1,7 @@
 import { TypeGuard } from '../../_helpers/types/TypeGuard';
 import { TypeAssert } from '../../_helpers/types/TypeAssert';
 import { throwAssertError } from '../../_helpers/lib/throwAssertError';
+import { validType } from '../../_helpers/lib/validType';
 
 
 export type DomainUserContacts = {
@@ -8,14 +9,14 @@ export type DomainUserContacts = {
     phoneNumber: string;
 }
 
-export const isDomainUserContacts: TypeGuard<DomainUserContacts> = function (data: any): data is DomainUserContacts {
+export const isDomainUserContacts: TypeGuard<DomainUserContacts> = function (data: any, partial: boolean = false): data is DomainUserContacts {
     if (typeof data !== 'object' || data === null) {
         return false;
     }
 
     if (
-        typeof data['email'] !== 'string' ||
-        typeof data['phoneNumber'] !== 'string'
+        !validType(data['email'], 'string', partial) ||
+        !validType(data['phoneNumber'], 'string', partial)
     ) {
         return false;
     }
@@ -23,8 +24,8 @@ export const isDomainUserContacts: TypeGuard<DomainUserContacts> = function (dat
     return true;
 };
 
-export const assertDomainUserContacts: TypeAssert<DomainUserContacts> = function (data: any, variableName: string, typeName: string) {
-    if (!isDomainUserContacts(data)) {
+export const assertDomainUserContacts: TypeAssert<DomainUserContacts> = function (data: any, variableName: string, typeName: string, partial: boolean = false) {
+    if (!isDomainUserContacts(data, partial)) {
         throwAssertError(variableName, typeName);
     }
 };
