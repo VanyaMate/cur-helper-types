@@ -5,4 +5,4 @@ export type AdminThemeType = With<ThemeType, [
     AdminThemeQuestionsShort,
     AdminThemeTestsShort
 ]>;
-export type AdminThemeShortType = Pick<ThemeType, 'id' | 'publicId' | 'title' | 'description' | 'enabled' | 'url'>;
+export type AdminThemeShortType = Pick<ThemeType, 'id' | 'publicId' | 'title' | 'description' | 'enabled' | 'url' | 'additional'>;

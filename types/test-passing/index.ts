@@ -66,3 +66,4 @@ export type TestPassingShortInfo =
 
 export type TestPassingFullType = With<TestPassingType, [ TestPassingProcess ]>;
 export type TestResultFullType = With<TestPassingType, [ TestPassingResults, TestPassingUserShort, TestPassingThemes, TestPassingTestShort ]>;
+export type TestResultShortType = With<TestPassingShortInfo, [ TestPassingTestShort ]>;
